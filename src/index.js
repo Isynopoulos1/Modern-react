@@ -3,23 +3,20 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-// to create a component of my App
-
-function getButtonText() {
-  return "Click on me";
-}
 //create a react component
 
 const App = () => {
+  const buttonText = { text: "click me  " };
+  const style = { backgroundColor: "blue", color: "white" };
+  //usar una const para quitar el react component Enter Name:
+  const labelText = "Enter  name";
   return (
     <div>
-      <label className="label" for="name">
-        Enter name:{" "}
+      <label className="label" htmlFor="name">
+        {labelText}
       </label>
       <input id="name" type="text" />
-      <button style={{ backgroundColor: "blue", color: "white" }}>
-        {getButtonText()}
-      </button>
+      <button style={style}>{buttonText.text}</button>
     </div>
   );
 };
